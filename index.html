@@ -13,6 +13,7 @@
      <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
      <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 	  
+     <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
       </head>
 	
     <body>
@@ -52,6 +53,8 @@
 	var strodeNursery = L.marker([51.130219,-2.733978]).addTo(mymap);
 	var accHell = L.marker([51.129872,-2.731595]).addTo(mymap);
 
+	
+	//omnivore.csv('pins.csv').addTo(mymap);
 	marker.bindPopup("<img class='popup' src='yuh.jpg'/><br /><b>Glastonbury Tor</b>").openPopup();
 	cblock.bindPopup("<b>C Block</b><br>Strode College, C-block").openPopup();
 	mblock.bindPopup("<b>M Block</b><br>Strode College, M-block").openPopup();
