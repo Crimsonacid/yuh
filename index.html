@@ -124,21 +124,14 @@
 		"accHell": accHell,
        };
 	
+	
+	
 	var markers = L.markerClusterGroup();
+markers.addLayer(L.marker(getRandomLatLng(map)));
+markers.addLayer(L.marker(getRandomLatLng(map)));
+map.addLayer(markers);
 	
-	var one = L.marker(new L.LatLng(0, 0));
-	var two = L.marker(new L.LatLng(1, 1));
-	var three = L.marker(new L.LatLng(-1, -1));
 	
-	yuh = {
-      "1": "one",
-      "2": "two",
-      "3": "three"
-    }
-	
-	mymap.addLayer(yuh);
-	//mymap.addLayer(one);
-	//mymap.addLayer(one);
 	
 	L.control.layers(baseMaps, overlayMaps).addTo(mymap);
        L.control.mousePosition().addTo(mymap);
