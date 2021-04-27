@@ -17,9 +17,6 @@
      <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 	  
      <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-	  
-	  
-	  
       </head>
 	
     <body>
@@ -60,7 +57,6 @@
     maxZoom: 20
 	});
 	
-
 	
 	var marker = L.marker([51.14471, -2.69866]).addTo(mymap);
 	var cblock = L.marker([51.129852, -2.7334955]).addTo(mymap);
@@ -76,7 +72,6 @@
 	var ablock = L.marker([51.130424,-2.733414]).addTo(mymap);
 	var strodeNursery = L.marker([51.130219,-2.733978]).addTo(mymap);
 	var accHell = L.marker([51.129872,-2.731595]).addTo(mymap);
-
 	
 	//omnivore.csv('pins.csv').addTo(mymap);
 	marker.bindPopup("<img class='popup' src='yuh.jpg'/><br /><b>Glastonbury Tor</b>").openPopup();
@@ -93,17 +88,20 @@
 	ablock.bindPopup("<img class='popup' src='everyBuilding.jpg'/><b>A Block</b><br>Strode College, A-block").openPopup();
 	strodeNursery.bindPopup("<img class='popup' src='everyBuilding.jpg'/><b>Strode Nursery</b><br>Strode Nursery").openPopup();
 	accHell.bindPopup("<img class='popup' src='Hell.jpg'/><b>Hell</b><br>It is just an off brand version of hell").openPopup();
-
+	
+	
 	    var baseMaps = {
            "OSM ": osm,
            "Google": google
         };
-
+	
+	
         var overlayMaps = {
             "marker": marker,
             "cblock": cblock,
             "mblock": mblock,
 		"jblock": jblock,
+
 		"eblock": eblock,
 		"dblock": dblock,
 		"swimmingPool": swimmingPool,
@@ -117,18 +115,9 @@
        };
 	
 	
-	
-	var markers = L.markerClusterGroup();
-markers.addLayer(L.marker(cblock(mymap)));
-	markers.addLayer(L.marker(dblock(mymap)));
-//... Add more layers ...
-mymap.addLayer(markers);
-	
-	
-	
 	L.control.layers(baseMaps, overlayMaps).addTo(mymap);
        L.control.mousePosition().addTo(mymap);
-
+	
 	mymap.addControl(new L.Control.Fullscreen());
 	omnivore.csv('strode.csv').addTo(mymap);
 </script>
