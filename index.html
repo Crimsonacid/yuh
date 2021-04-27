@@ -124,13 +124,11 @@
 		"accHell": accHell,
        };
 	
-	var markers = L.markerClusterGroup(bblock, 
-					   cblock, 
-					   mblock, 
-					   eblock, 
-					   jblock);
+	var markers = L.markerClusterGroup();
 	
-	mymap.addLayer(markers);
+	var yuh = L.marker(new L.LatLng(0, 0));
+	
+	mymap.addLayer(yuh);
 	
 	L.control.layers(baseMaps, overlayMaps).addTo(mymap);
        L.control.mousePosition().addTo(mymap);
