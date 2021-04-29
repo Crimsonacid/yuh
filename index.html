@@ -145,8 +145,9 @@ var clusterYuh = {
        };
 	
 	var markers = L.markerClusterGroup();
-markers.addLayer(L.marker(getRandomLatLng(map)));
-... Add more layers ...
+	
+markers.addLayer(clusterYuh);
+	
 map.addLayer(markers);
 	
 	
