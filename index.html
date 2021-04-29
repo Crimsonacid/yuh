@@ -126,8 +126,28 @@
 	
 	
 	
+var clusterYuh = {
+            "marker": marker,
+            "cblock": cblock,
+            "mblock": mblock,
+		"jblock": jblock,
 
+		"eblock": eblock,
+		"dblock": dblock,
+		"swimmingPool": swimmingPool,
+		"youthClub": youthClub,
+		"refectory": refectory,
+		"strodeTheatre": strodeTheatre,
+		"bblock": bblock,
+		"ablock": ablock,
+		"strodeNursery": strodeNursery,
+		"accHell": accHell,
+       };
 	
+	var markers = L.markerClusterGroup();
+markers.addLayer(L.marker(getRandomLatLng(map)));
+... Add more layers ...
+map.addLayer(markers);
 	
 	
 	L.control.layers(baseMaps, overlayMaps).addTo(mymap);
