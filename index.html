@@ -31,21 +31,6 @@
 	    zoom: 13,
 	    maxZoom: 20
 	});
-//	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-//		maxZoom: 20,
-//		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-//			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-//		id: 'mapbox/streets-v11',
-//		tileSize: 512,
-//		zoomOffset: -1
-//	}).addTo(mymap);
-	
-//	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//	  maxNativeZoom: 19,	
-//	    maxZoom: 20,
-//	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  //      }).addTo(mymap);	
-	//L.control.mousePosition().addTo(mymap);
 	
 	var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxNativeZoom: 19,	
@@ -77,7 +62,6 @@
 	var strodeNursery = L.marker([51.128943,-2.732159]).addTo(mymap);
 	var accHell = L.marker([51.129872,-2.731595]).addTo(mymap);
 	
-	//omnivore.csv('pins.csv').addTo(mymap);
 	marker.bindPopup("<img class='popup' src='yuh.jpg'/><br /><b>Glastonbury Tor</b>").openPopup();
 	cblock.bindPopup("<img class='popup' src='everyBuilding.jpg'/><b>C Block</b><br>Strode College, C-block").openPopup();
 	mblock.bindPopup("<img class='popup' src='everyBuilding.jpg'/><b>M Block</b><br>Strode College, M-block").openPopup();
@@ -126,7 +110,6 @@
        L.control.mousePosition().addTo(mymap);
 	
 	mymap.addControl(new L.Control.Fullscreen());
-	omnivore.csv('markers.csv').addTo(mymap);
 </script>
  </body>
 </html>
